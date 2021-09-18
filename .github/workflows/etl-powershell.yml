@@ -33,3 +33,5 @@ jobs:
       - name: Run PowerShell ETL
         shell: pwsh
         run: ./etl.ps1
+        env: 
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
