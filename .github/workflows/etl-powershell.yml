@@ -28,7 +28,8 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-         ${{secrets.GITHUB_TOKEN}} > ghtoken.raw.json
+         printenv GITHUB_TOKEN > ghtoken.raw.json
+         echo "wrote token to file"
          gh auth login --with-token < ghtoken.raw.json
          gh api user/orgs --paginate --jq '. | map({name: .login})' > .\data\organizations.json
         env: 
