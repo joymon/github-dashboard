@@ -28,7 +28,8 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-         gh auth login < ${{secrets.GITHUB_TOKEN}}
+         ${{secrets.GITHUB_TOKEN}} > ghtoken.raw.json
+         gh auth login < ghtoken.raw.json
          gh api user/orgs --paginate --jq '. | map({name: .login})' > .\data\organizations.json
         env: 
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
