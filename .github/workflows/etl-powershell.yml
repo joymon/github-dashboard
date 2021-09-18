@@ -29,7 +29,7 @@ jobs:
       - name: Run a one-line script
         run: |
          ${{secrets.GITHUB_TOKEN}} > ghtoken.raw.json
-         gh auth login < ghtoken.raw.json
+         gh auth login --with-token < ghtoken.raw.json
          gh api user/orgs --paginate --jq '. | map({name: .login})' > .\data\organizations.json
         env: 
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
