@@ -3,6 +3,6 @@ gh api user/repos --paginate --jq '. | map({created_at: .created_at, name: .name
 
 ################# Get Issues #############################
 # Get authenticated user issues 
-gh api issues?filter=all --paginate --jq '. | map({repository: .repository.name, organization: .repository.owner.login,created_at: .created_at,created_by: .user.login, created_by_type: .user.type, title: .title,state: .state, assignee: .assignee.login})' > .\data\issues.json
+gh api issues?filter=all --paginate --jq '. | map({repository: .repository.name, organization: .repository.owner.login,created_at: .created_at,created_by: .user.login, created_by_type: .user.type, title: .title,state: .state, assignee: .assignee.login,comments_count: .comments, html_url: .html_url})' > .\data\issues.json
 # If want to iterate use https://docs.github.com/en/rest/reference/issues#list-organization-issues-assigned-to-the-authenticated-user
 #########################################################
