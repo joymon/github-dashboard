@@ -28,13 +28,13 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-         #gh auth status
+         gh auth status
          #printenv GITHUB_TOKEN > ghtoken.raw.json
          echo "wrote token to file"
          gh auth login
          gh api user/orgs --paginate --jq '. | map({name: .login})' > .\data\organizations.json
-        #env: 
-        #  GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        env: 
+          GITHUB_TOKEN: ${{secrets.MY_GITHUB_TOKEN}}
       # Runs a set of commands using the runners shell
       - name: Run PowerShell ETL
         shell: pwsh
