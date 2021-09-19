@@ -41,6 +41,13 @@ jobs:
          ./etl.ps1
         env: 
           GITHUB_TOKEN: ${{secrets.MY_GITHUB_TOKEN}}
+      - name: Deploy back to repo
+        run: |
+          echo "Pushing data back to repo."
+          git add .
+          git commit -m [skip ci]
+          git push
+          echo "Pushed data back to repo."
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
