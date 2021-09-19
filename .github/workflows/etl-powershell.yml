@@ -44,6 +44,8 @@ jobs:
       - name: Deploy back to repo
         run: |
           echo "Pushing data back to repo."
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           git add .
           git commit -m "[skip ci]"
           git push
