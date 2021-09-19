@@ -1,7 +1,7 @@
 # github-dashboard
 Dashboard for GitHub across all organizations and projects
 
-Unfortunately PowerBI report cannot be embedded in GitHub readme.md. Please view [live dashboard](https://app.powerbi.com/view?r=eyJrIjoiZjVkNTExMjgtYTYyMS00MWRmLWEwMmItZjBmNjcyYjJiMGIyIiwidCI6IjZiYTQxYTgzLTJmOWYtNGQzMi1iNmU0LTY1YWRlNTBiZDcyMiIsImMiOjN9)
+Unfortunately PowerBI report cannot be embedded in GitHub readme.md. Please view [live dashboard](https://app.powerbi.com/view?r=eyJrIjoiZjVkNTExMjgtYTYyMS00MWRmLWEwMmItZjBmNjcyYjJiMGIyIiwidCI6IjZiYTQxYTgzLTJmOWYtNGQzMi1iNmU0LTY1YWRlNTBiZDcyMiIsImMiOjN9) or click on the images below
 
 # Images
 ## Screenshot of organizations dashboard
