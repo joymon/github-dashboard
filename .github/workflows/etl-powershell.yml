@@ -45,7 +45,7 @@ jobs:
         run: |
           echo "Pushing data back to repo."
           git add .
-          git commit -m [skip ci]
+          git commit -m "[skip ci]"
           git push
           echo "Pushed data back to repo."
       - name: Deploy 🚀
