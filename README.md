@@ -1,4 +1,4 @@
-# GitHub Dashboard
+# GitHub Dashboards
 Dashboards for GitHub across all organizations and projects
 
 Unfortunately GitHub [doesn't allow iframe embedding inside markdown.](https://github.github.com/gfm/#disallowed-raw-html-extension-). Hence no PowerBI report embeddeding in readme.md. Please view [live dashboard](https://app.powerbi.com/view?r=eyJrIjoiZjVkNTExMjgtYTYyMS00MWRmLWEwMmItZjBmNjcyYjJiMGIyIiwidCI6IjZiYTQxYTgzLTJmOWYtNGQzMi1iNmU0LTY1YWRlNTBiZDcyMiIsImMiOjN9) or click on the images below
