@@ -24,24 +24,13 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: |
-         gh auth status
-         echo "wrote token to file"
-         #gh auth login
-         gh api user/orgs --paginate --jq '. | map({name: .login})' > .\data\organizations.json
-        env: 
-          GITHUB_TOKEN: ${{secrets.MY_GITHUB_TOKEN}}
-      # Runs a set of commands using the runners shell
       - name: Run PowerShell ETL
         shell: pwsh
         run: |
          ./etl.ps1
         env: 
           GITHUB_TOKEN: ${{secrets.MY_GITHUB_TOKEN}}
-      - name: Deploy back to repo
+      - name: Deploy back to repo 🚀
         run: |
           echo "Pushing data back to repo."
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
@@ -50,8 +39,3 @@ jobs:
           git commit -m "[skip ci]"
           git push
           echo "Pushed data back to repo."
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.5
-        with:
-          branch: gh-pages # The branch the action should deploy to.
-          folder: data
