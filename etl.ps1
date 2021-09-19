@@ -1,4 +1,4 @@
-gh auth login
+gh auth status
 "start: etl.ps1"
 gh api user/orgs --paginate --jq '. | map({name: .login})' > .\data\organizations.json
 "Pulled organizations data"
