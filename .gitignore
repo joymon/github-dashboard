@@ -4,3 +4,4 @@
 
 *.sqlite
 **/*.raw.json
+.vs
