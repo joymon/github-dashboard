@@ -14,7 +14,8 @@ Unfortunately GitHub [doesn't allow iframe embedding inside markdown.](https://g
 ## Screenshot of issues dashboard
 
 [![Issues screenshot](images/issues.PNG)][3]
-
+# Architecture
+![Architecture](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/joymon/github-dashboards/main/diagrams/container.puml&fmt=svg)
 # Built-With
 
 - [GitHub CLI - ETL tool to pull data from GitHub.com](https://cli.github.com)
