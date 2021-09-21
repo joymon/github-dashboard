@@ -1,0 +1,26 @@
+@startuml
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4_Container.puml
+!includeurl https://raw.githubusercontent.com/joymon/JoymonOnline.In/master/diagrams/vars.puml
+
+title "Architecture for GitHub Dashboards"
+
+LAYOUT_LEFT_RIGHT
+Person(personAlias, "Internet User", USER_DESC)
+Person(developer,"Developer","Developer coding the etl.ps1 and PowerBI dashboards")
+System_Ext(github,"GitHub",GH_SYS_DESC)
+'System_Ext(Zapier,"Zapier","A no-code automation platform")
+System_Boundary(GitHubDashboards, "GitHub Dashboards"){
+    Container(browser,"WebBrowser","HTML, JavaScript, CSS, AngularJS","Any modern web browser supporting PowerBi.com")
+    Container(PowerBI, "Power BI Dashboard", "Power BI.com", "Serves web site. Static files")
+    Rel(browser,PowerBI,"Access the website","TCP 443,http(s), Anonymous")
+    Container(ghActions,"GitHubActions","CI/CD Service","Trigger based on push and periodic")
+    Container(source,"Source code","GitHub Repo","Source of etl.ps1,/data, Power BI dashboard")
+    Rel(ghActions,source,"Clone then push the /data")
+    Rel(PowerBI, source,"Read /Data folder")
+    Rel(developer,ghActions,"Commit which trigger webhook")
+    Rel(developer,source,"Commit")
+    Rel(ghActions,github,"Access organization, repository and issues details using API")
+}
+Rel(personAlias, browser, "Access site", "Opens browser and navigate")
+caption "JoymonOnline"
+@enduml
