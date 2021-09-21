@@ -27,7 +27,7 @@ Unfortunately GitHub [doesn't allow iframe embedding inside markdown.](https://g
 - [GitHub CLI - ETL tool to pull data from GitHub.com](https://cli.github.com)
 - [PowerShell - Just to trigger GitHub CLI based ETL (Optional)](https://github.com/features/actions)
 - :open_file_folder: [GitHub - as source control](github.com)
-- [GitHub Actions - Run ETL pipeline using GitHub CLI](https://github.com/features/actions)
+- :arrow_forward: [GitHub Actions - Run ETL pipeline using GitHub CLI](https://github.com/features/actions)
 - [Power BI - Dashboards visualization](https://powerbi.microsoft.com/)   
 
 [1]: https://app.powerbi.com/view?r=eyJrIjoiZjVkNTExMjgtYTYyMS00MWRmLWEwMmItZjBmNjcyYjJiMGIyIiwidCI6IjZiYTQxYTgzLTJmOWYtNGQzMi1iNmU0LTY1YWRlNTBiZDcyMiIsImMiOjN9&pageName=ReportSection "Click to view Power BI Dashboard"
